@@ -1,0 +1,35 @@
+<!-- Write JavaScript to check whether a number is odd or even only if number is greater than
+30 and less than 100 using internal Javascript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even Checker</title>
+    <script>
+        function checkNumber() {
+            var num = document.getElementById("numberInput").value;
+
+            if (num > 30 && num < 100) {
+                if (num % 2 === 0) {
+                    // document.write
+                    alert(num + " is even.");
+                } else {
+                    // document.write
+                    alert(num + " is odd.");
+                }
+            } else {
+                // document.write
+               alert ("The number is not within the range of 31 to 99.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Odd or Even Checker</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+
+    
+    <button onclick="checkNumber()">Check</button>
+</body>
+</html>

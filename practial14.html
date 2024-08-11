@@ -1,0 +1,48 @@
+<!-- Write a JavaScript program to demonstrate error handling using try, catch and finally
+block. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+        <script>
+        function calculateArea(length, width) {
+  // Input validation (optional but recommended)
+  if (isNaN(length) || isNaN(width)) {
+    throw new Error("Invalid input: Length and width must be numbers.");
+  }
+
+  try {
+    // Code that might throw an error
+    const area = length * width;
+
+    // Code that executes if no errors occur (optional)
+    console.log("Calculated area:", area);
+    return area;
+  } catch (error) {
+    // Code to handle errors
+    console.error("Error:", error.message);
+    return null; // Or handle the error differently (e.g., display a message)
+  } finally {
+    // Code that always executes, regardless of errors
+    console.log("Calculation complete (try...catch block finished).");
+  }
+}
+
+// Example usage
+try {
+  const result = calculateArea(5, 10);
+  console.log("Result:", result); // Output: Result: 50
+} catch (error) {
+  // Handle errors if the calculateArea function throws an error
+  console.error("Error in usage:", error.message);
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

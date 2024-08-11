@@ -1,0 +1,38 @@
+<!-- Write JavaScript to illustrate all 3 types of popup/dialog box. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Dialogs Example</title>
+</head>
+<body>
+    <h1>JavaScript Popup/Dialog Boxes</h1>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showConfirm()">Show Confirm</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+
+    <script>
+        function showAlert() {
+            alert("This is an alert box!");
+        }
+
+        function showConfirm() {
+            var result = confirm("Do you confirm this action?");
+            if (result) {
+                alert("User clicked OK!");
+            } else {
+                alert("User clicked Cancel!");
+            }
+        }
+
+        function showPrompt() {
+            var userInput = prompt("Please enter your name:", "Your name here");
+            if (userInput !== null) {
+                alert("Hello, " + userInput + "!");
+            } else {
+                alert("User cancelled the prompt.");
+            }
+        }
+    </script>
+</body>

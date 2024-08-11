@@ -1,0 +1,46 @@
+ <!-- Develop a student registration form containing input fields like student id, name, address,
+age, gender, contact and email. Also validate form using JavaScript to fulfill following
+requirements:
+• Student Id, Name and Address should be required.
+• Student Id should be number.
+• Age should not be negative and should be number.
+• Gender should be checked.
+• Contact no and email should be validated properly using regular expression. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+</head>
+<body>
+  <h1>Student Registration</h1>
+  <form id="registration-form">
+    <label for="student-id">Student ID:</label>
+    <input type="text" id="student-id" name="studentID" required><br>
+
+    <label for="student-name">Student Name:</label>
+    <input type="text" id="student-name" name="studentName" required><br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" required></textarea><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br>
+
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female<br>
+
+    <label for="contact">Contact No:</label>
+    <input type="tel" id="contact" name="contact" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <button type="submit">Register</button>
+  </form>
+  <p id="validation-message"></p>
+  <script src="practial11.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- Write JavaScript code to calculate factorial of inputted number. (Note only odd number
+is accepted, otherwise throw error message). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factorial Calculator</title>
+</head>
+<body>
+  <h1>Factorial Calculator (Odd Numbers Only)</h1>
+  <input type="number" id="number" placeholder="Enter an odd number">
+  <button onclick="calculateFactorial()">Calculate</button>
+  <p id="result"></p>
+  <script>
+    function calculateFactorial() {
+      const number = parseInt(document.getElementById("number").value);
+  
+      if (number % 2 === 0) {
+        document.getElementById("result").textContent = "Error: Please enter an odd number.";
+        return;  // Exit the function if number is even
+      }
+  
+      let factorial = 1;
+      for (let i = 1; i <= number; i += 2) {
+        factorial *= i;
+      }
+  
+      document.getElementById("result").textContent = `The factorial of ${number} is ${factorial}`;
+    }
+  </script>
+</body>
+</html>
